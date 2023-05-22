@@ -14,10 +14,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/todo", getTodo);
-app.post("/todo/add", addTodo);
-app.put("/todo/:id", updateTodo);
-app.delete("/todo/:id", deleteTodo);
+app.get("/api/todo", getTodo);
+app.post("/api/todo/add", addTodo);
+app.put("/api/todo/:id", updateTodo);
+app.delete("/api/todo/:id", deleteTodo);
 
 mongoose.connection.once("open", () => {
   console.log("Mongo DB Connected");
